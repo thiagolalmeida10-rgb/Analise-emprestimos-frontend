@@ -13,7 +13,7 @@ export type Cliente = {
 }
 
 export type CriarEmprestimoRequest = {
-    customerId: number;
+    clientId: number;
     amount: number;
 }
 

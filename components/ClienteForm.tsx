@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import { useState } from "react"
+import { useState } from "react";
 
 interface Cliente {
     id: number;
@@ -66,7 +66,6 @@ export default function ClientForm() {
             setCpf("");
             setRenda("");
             setEstado("");
-
         } catch (error) {
             if (error instanceof Error) {
                 setErro(error.message);
@@ -77,96 +76,162 @@ export default function ClientForm() {
     }
 
     return (
-        <form onSubmit={cadastrarCliente}>
+        <form
+            onSubmit={cadastrarCliente}
+            className="mx-auto w-full max-w-2xl rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-200 sm:p-8"
+        >
+            {/* Cabeçalho */}
+            <div className="mb-8 border-b border-slate-200 pb-6">
+                <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-xl bg-blue-100 text-2xl">
+                    👤
+                </div>
 
-            <div>
-                <label htmlFor="nome">
-                    Nome
+                <h2 className="text-2xl font-bold text-slate-900">
+                    Cadastrar cliente
+                </h2>
+
+                <p className="mt-2 text-sm text-slate-500">
+                    Preencha os dados abaixo para cadastrar um novo
+                    cliente.
+                </p>
+            </div>
+
+            {/* Nome */}
+            <div className="mb-5">
+                <label
+                    htmlFor="nome"
+                    className="mb-2 block text-sm font-semibold text-slate-700"
+                >
+                    Nome completo
                 </label>
 
                 <input
                     id="nome"
                     type="text"
-                    placeholder="Digite seu nome"
+                    placeholder="Digite o nome completo"
                     value={nome}
                     onChange={(e) => setNome(e.target.value)}
                     required
+                    className="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-800 outline-none transition placeholder:text-slate-400 focus:border-blue-500 focus:ring-4 focus:ring-blue-100"
                 />
             </div>
 
-            <div>
-                <label htmlFor="idade">
-                    Idade
-                </label>
+            {/* Idade e CPF */}
+            <div className="grid gap-5 sm:grid-cols-2">
+                <div>
+                    <label
+                        htmlFor="idade"
+                        className="mb-2 block text-sm font-semibold text-slate-700"
+                    >
+                        Idade
+                    </label>
 
-                <input
-                    id="idade"
-                    type="number"
-                    placeholder="Digite sua idade"
-                    value={idade}
-                    onChange={(e) => setIdade(e.target.value)}
-                    required
-                />
+                    <input
+                        id="idade"
+                        type="number"
+                        min="1"
+                        placeholder="Ex: 25"
+                        value={idade}
+                        onChange={(e) => setIdade(e.target.value)}
+                        required
+                        className="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-800 outline-none transition placeholder:text-slate-400 focus:border-blue-500 focus:ring-4 focus:ring-blue-100"
+                    />
+                </div>
+
+                <div>
+                    <label
+                        htmlFor="cpf"
+                        className="mb-2 block text-sm font-semibold text-slate-700"
+                    >
+                        CPF
+                    </label>
+
+                    <input
+                        id="cpf"
+                        type="text"
+                        placeholder="Digite o CPF"
+                        value={cpf}
+                        onChange={(e) => setCpf(e.target.value)}
+                        required
+                        maxLength={11}
+                        className="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-800 outline-none transition placeholder:text-slate-400 focus:border-blue-500 focus:ring-4 focus:ring-blue-100"
+                    />
+                </div>
             </div>
 
-            <div>
-                <label htmlFor="cpf">
-                    CPF
-                </label>
+            {/* Renda e Estado */}
+            <div className="mt-5 grid gap-5 sm:grid-cols-2">
+                <div>
+                    <label
+                        htmlFor="renda"
+                        className="mb-2 block text-sm font-semibold text-slate-700"
+                    >
+                        Renda mensal
+                    </label>
 
-                <input
-                    id="cpf"
-                    type="text"
-                    placeholder="Digite seu CPF"
-                    value={cpf}
-                    onChange={(e) => setCpf(e.target.value)}
-                    required
-                />
+                    <div className="relative">
+                        <span className="absolute left-4 top-1/2 -translate-y-1/2 text-sm font-medium text-slate-400">
+                            R$
+                        </span>
+
+                        <input
+                            id="renda"
+                            type="number"
+                            min="0"
+                            step="0.01"
+                            placeholder="0,00"
+                            value={renda}
+                            onChange={(e) => setRenda(e.target.value)}
+                            required
+                            className="w-full rounded-xl border border-slate-300 bg-white py-3 pl-11 pr-4 text-slate-800 outline-none transition placeholder:text-slate-400 focus:border-blue-500 focus:ring-4 focus:ring-blue-100"
+                        />
+                    </div>
+                </div>
+
+                <div>
+                    <label
+                        htmlFor="estado"
+                        className="mb-2 block text-sm font-semibold text-slate-700"
+                    >
+                        Estado
+                    </label>
+
+                    <input
+                        id="estado"
+                        type="text"
+                        placeholder="Ex: SP"
+                        value={estado}
+                        onChange={(e) =>
+                            setEstado(e.target.value.toUpperCase())
+                        }
+                        required
+                        maxLength={2}
+                        className="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-800 uppercase outline-none transition placeholder:text-slate-400 placeholder:normal-case focus:border-blue-500 focus:ring-4 focus:ring-blue-100"
+                    />
+                </div>
             </div>
 
-            <div>
-                <label htmlFor="renda">
-                    Renda mensal
-                </label>
-
-                <input
-                    id="renda"
-                    type="number"
-                    step="0.01"
-                    placeholder="Digite sua renda"
-                    value={renda}
-                    onChange={(e) => setRenda(e.target.value)}
-                    required
-                />
-            </div>
-
-            <div>
-                <label htmlFor="estado">
-                    Estado
-                </label>
-
-                <input
-                    id="estado"
-                    type="text"
-                    placeholder="Digite seu estado"
-                    value={estado}
-                    onChange={(e) => setEstado(e.target.value)}
-                    required
-                />
-            </div>
-
-            <button type="submit">
+            {/* Botão */}
+            <button
+                type="submit"
+                className="mt-8 w-full rounded-xl bg-blue-600 px-5 py-3.5 font-semibold text-white shadow-sm transition hover:bg-blue-700 hover:shadow-md focus:outline-none focus:ring-4 focus:ring-blue-200 active:scale-[0.99]"
+            >
                 Cadastrar cliente
             </button>
 
+            {/* Mensagem de sucesso */}
             {mensagem && (
-                <p>{mensagem}</p>
+                <div className="mt-5 rounded-xl border border-green-200 bg-green-50 p-4 text-sm font-medium text-green-700">
+                    ✓ {mensagem}
+                </div>
             )}
 
+            {/* Mensagem de erro */}
             {erro && (
-                <p>{erro}</p>
+                <div className="mt-5 rounded-xl border border-red-200 bg-red-50 p-4 text-sm font-medium text-red-700">
+                    ⚠ {erro}
+                </div>
             )}
-
         </form>
     );
 }
