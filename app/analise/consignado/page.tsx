@@ -1,24 +1,88 @@
 import LoanForm from "@/components/LoanForm";
 
-export default function ConsignadoPage() {
+export default function Consignado() {
     return (
-        <main>
-            <h1>Empréstimo Consignado</h1>
+        <main className="min-h-screen bg-slate-50 px-4 py-10 sm:px-6 lg:px-8">
+            <div className="mx-auto max-w-6xl">
 
-            <p>
-                Faça a análise de elegibilidade para
-                empréstimo consignado.
-            </p>
+                <div className="mb-10">
+                    <div className="mb-3 inline-flex items-center rounded-full bg-violet-100 px-3 py-1 text-sm font-semibold text-violet-700">
+                        Empréstimo Consignado
+                    </div>
 
-            <p>
-                <strong>Taxa de juros:</strong> 2%
-            </p>
+                    <h1 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+                        Analise seu empréstimo
+                    </h1>
 
-            <p>
-                <strong>Tipo:</strong> CONSIGNADO
-            </p>
+                    <p className="mt-3 max-w-2xl text-base leading-7 text-slate-600">
+                        Faça uma análise de elegibilidade e descubra
+                        as condições disponíveis para um empréstimo
+                        consignado.
+                    </p>
+                </div>
 
-            <LoanForm />
+                <div className="grid gap-8 lg:grid-cols-[1fr_480px] lg:items-start">
+
+                    <div className="space-y-6">
+                        <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                            <h2 className="text-lg font-semibold text-slate-900">
+                                Sobre o empréstimo
+                            </h2>
+
+                            <p className="mt-2 text-sm leading-6 text-slate-500">
+                                Informe o ID do cliente e o valor desejado
+                                para verificar a elegibilidade para o
+                                empréstimo consignado.
+                            </p>
+
+                            <div className="mt-6 grid gap-4 sm:grid-cols-2">
+                                <div className="rounded-xl bg-violet-50 p-5">
+                                    <p className="text-sm font-medium text-violet-600">
+                                        Taxa de juros
+                                    </p>
+
+                                    <p className="mt-1 text-2xl font-bold text-violet-900">
+                                        2%
+                                    </p>
+                                </div>
+
+                                <div className="rounded-xl bg-slate-100 p-5">
+                                    <p className="text-sm font-medium text-slate-500">
+                                        Tipo
+                                    </p>
+
+                                    <p className="mt-1 text-2xl font-bold text-slate-900">
+                                        CONSIGNADO
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="rounded-2xl border border-violet-100 bg-violet-50 p-6">
+                            <div className="flex gap-4">
+                                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-violet-600 font-bold text-white">
+                                    %
+                                </div>
+
+                                <div>
+                                    <h3 className="font-semibold text-violet-900">
+                                        Taxa mais baixa
+                                    </h3>
+
+                                    <p className="mt-1 text-sm leading-6 text-violet-800">
+                                        O empréstimo consignado possui uma
+                                        taxa de juros de apenas 2%. Faça a
+                                        análise para verificar sua
+                                        elegibilidade.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <LoanForm tipo="CONSIGNADO"/>
+                </div>
+            </div>
         </main>
     );
 }

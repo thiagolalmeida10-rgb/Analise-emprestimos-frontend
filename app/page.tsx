@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-slate-100 px-6 py-12">
       <div className="mx-auto max-w-5xl">
-        {/* Cabeçalho */}
+
         <header className="mb-12 text-center">
           <span className="mb-3 inline-block rounded-full bg-blue-100 px-4 py-1 text-sm font-semibold text-blue-700">
             Sistema Financeiro
@@ -19,14 +19,13 @@ export default function Home() {
           </p>
         </header>
 
-        {/* Menu */}
         <section>
           <h2 className="mb-6 text-2xl font-semibold text-slate-800">
             Menu
           </h2>
 
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {/* Clientes */}
+
             <Link
               href="/clientes"
               className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-200 transition hover:-translate-y-1 hover:shadow-lg"
@@ -48,7 +47,6 @@ export default function Home() {
               </span>
             </Link>
 
-            {/* Novo cliente */}
             <Link
               href="/clientes/novo"
               className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-200 transition hover:-translate-y-1 hover:shadow-lg"
@@ -70,7 +68,6 @@ export default function Home() {
               </span>
             </Link>
 
-            {/* Buscar cliente */}
             <Link
               href="/clientes/id"
               className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-200 transition hover:-translate-y-1 hover:shadow-lg"
@@ -92,7 +89,6 @@ export default function Home() {
               </span>
             </Link>
 
-            {/* Análise */}
             <Link
               href="/analise"
               className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-200 transition hover:-translate-y-1 hover:shadow-lg"
@@ -116,7 +112,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Rodapé */}
         <footer className="mt-12 text-center text-sm text-slate-500">
           Sistema de Gerenciamento de Empréstimos
         </footer>

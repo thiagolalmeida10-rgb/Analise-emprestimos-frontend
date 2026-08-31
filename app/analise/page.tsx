@@ -5,7 +5,6 @@ export default function Analise() {
         <main className="min-h-screen bg-slate-100 px-6 py-12">
             <div className="mx-auto max-w-5xl">
 
-                {/* Voltar */}
                 <Link
                     href="/"
                     className="mb-6 inline-flex items-center text-sm font-semibold text-blue-600 transition hover:text-blue-800"
@@ -13,7 +12,6 @@ export default function Analise() {
                     ← Voltar para o início
                 </Link>
 
-                {/* Cabeçalho */}
                 <header className="mb-10">
                     <span className="text-sm font-semibold uppercase tracking-wide text-orange-600">
                         Empréstimos
@@ -29,10 +27,8 @@ export default function Analise() {
                     </p>
                 </header>
 
-                {/* Cards */}
                 <section className="grid gap-6 md:grid-cols-3">
 
-                    {/* Pessoal */}
                     <div className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-200 transition hover:-translate-y-1 hover:shadow-lg">
                         <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-100 text-2xl">
                             👤
@@ -65,7 +61,6 @@ export default function Analise() {
                         </Link>
                     </div>
 
-                    {/* Garantia */}
                     <div className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-200 transition hover:-translate-y-1 hover:shadow-lg">
                         <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-green-100 text-2xl">
                             🏠
@@ -98,7 +93,6 @@ export default function Analise() {
                         </Link>
                     </div>
 
-                    {/* Consignado */}
                     <div className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-200 transition hover:-translate-y-1 hover:shadow-lg">
                         <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-purple-100 text-2xl">
                             💳
