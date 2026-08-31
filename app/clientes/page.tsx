@@ -91,7 +91,6 @@ export default function Clientes() {
         <main className="min-h-screen bg-slate-100 px-6 py-12">
             <div className="mx-auto max-w-6xl">
 
-                {/* Cabeçalho */}
                 <header className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
                     <div>
                         <span className="text-sm font-semibold uppercase tracking-wide text-blue-600">
@@ -115,7 +114,6 @@ export default function Clientes() {
                     </Link>
                 </header>
 
-                {/* Resumo */}
                 <section className="mb-6 grid gap-4 sm:grid-cols-3">
                     <div className="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-slate-200">
                         <p className="text-sm font-medium text-slate-500">
@@ -184,7 +182,6 @@ export default function Clientes() {
                     </div>
                 </section>
 
-                {/* Tabela */}
                 <section className="overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-slate-200">
                     <div className="border-b border-slate-200 px-6 py-5">
                         <h2 className="text-lg font-bold text-slate-900">
@@ -201,7 +198,6 @@ export default function Clientes() {
                     </div>
                 </section>
 
-                {/* Voltar */}
                 <div className="mt-6">
                     <Link
                         href="/"

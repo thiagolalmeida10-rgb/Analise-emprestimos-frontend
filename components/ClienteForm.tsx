@@ -80,7 +80,6 @@ export default function ClientForm() {
             onSubmit={cadastrarCliente}
             className="mx-auto w-full max-w-2xl rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-200 sm:p-8"
         >
-            {/* Cabeçalho */}
             <div className="mb-8 border-b border-slate-200 pb-6">
                 <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-xl bg-blue-100 text-2xl">
                     👤
@@ -96,7 +95,6 @@ export default function ClientForm() {
                 </p>
             </div>
 
-            {/* Nome */}
             <div className="mb-5">
                 <label
                     htmlFor="nome"
@@ -116,7 +114,6 @@ export default function ClientForm() {
                 />
             </div>
 
-            {/* Idade e CPF */}
             <div className="grid gap-5 sm:grid-cols-2">
                 <div>
                     <label
@@ -159,7 +156,6 @@ export default function ClientForm() {
                 </div>
             </div>
 
-            {/* Renda e Estado */}
             <div className="mt-5 grid gap-5 sm:grid-cols-2">
                 <div>
                     <label
@@ -195,23 +191,19 @@ export default function ClientForm() {
                     >
                         Estado
                     </label>
-
+                
                     <input
                         id="estado"
                         type="text"
-                        placeholder="Ex: SP"
+                        placeholder="Digite o nome do estado"
                         value={estado}
-                        onChange={(e) =>
-                            setEstado(e.target.value.toUpperCase())
-                        }
+                        onChange={(e) => setEstado(e.target.value)}
                         required
-                        maxLength={2}
-                        className="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-800 uppercase outline-none transition placeholder:text-slate-400 placeholder:normal-case focus:border-blue-500 focus:ring-4 focus:ring-blue-100"
+                        className="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-800 outline-none transition placeholder:text-slate-400 focus:border-blue-500 focus:ring-4 focus:ring-blue-100"
                     />
                 </div>
             </div>
 
-            {/* Botão */}
             <button
                 type="submit"
                 className="mt-8 w-full rounded-xl bg-blue-600 px-5 py-3.5 font-semibold text-white shadow-sm transition hover:bg-blue-700 hover:shadow-md focus:outline-none focus:ring-4 focus:ring-blue-200 active:scale-[0.99]"
@@ -219,14 +211,12 @@ export default function ClientForm() {
                 Cadastrar cliente
             </button>
 
-            {/* Mensagem de sucesso */}
             {mensagem && (
                 <div className="mt-5 rounded-xl border border-green-200 bg-green-50 p-4 text-sm font-medium text-green-700">
                     ✓ {mensagem}
                 </div>
             )}
 
-            {/* Mensagem de erro */}
             {erro && (
                 <div className="mt-5 rounded-xl border border-red-200 bg-red-50 p-4 text-sm font-medium text-red-700">
                     ⚠ {erro}

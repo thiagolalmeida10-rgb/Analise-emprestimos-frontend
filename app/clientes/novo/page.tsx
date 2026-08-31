@@ -6,7 +6,6 @@ export default function NovoCliente() {
         <main className="min-h-screen bg-slate-100 px-6 py-12">
             <div className="mx-auto max-w-2xl">
 
-                {/* Cabeçalho */}
                 <header className="mb-8">
                     <Link
                         href="/clientes"
@@ -30,7 +29,6 @@ export default function NovoCliente() {
                     </div>
                 </header>
 
-                {/* Formulário */}
                 <ClientForm />
             </div>
         </main>

@@ -51,7 +51,6 @@ export default function BuscarCliente() {
         <main className="min-h-screen bg-slate-100 px-6 py-12">
             <div className="mx-auto max-w-2xl">
 
-                {/* Voltar */}
                 <Link
                     href="/clientes"
                     className="mb-6 inline-flex items-center text-sm font-semibold text-blue-600 transition hover:text-blue-800"
@@ -59,7 +58,6 @@ export default function BuscarCliente() {
                     ← Voltar para clientes
                 </Link>
 
-                {/* Cabeçalho */}
                 <header className="mb-8">
                     <span className="text-sm font-semibold uppercase tracking-wide text-purple-600">
                         Clientes
@@ -74,7 +72,6 @@ export default function BuscarCliente() {
                     </p>
                 </header>
 
-                {/* Card de busca */}
                 <section className="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-200 sm:p-8">
                     <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-purple-100 text-2xl">
                         🔎
@@ -111,7 +108,6 @@ export default function BuscarCliente() {
                         </button>
                     </div>
 
-                    {/* Erro */}
                     {erro && (
                         <div className="mt-5 rounded-xl border border-red-200 bg-red-50 p-4 text-sm font-medium text-red-700">
                             ⚠ {erro}
@@ -119,7 +115,6 @@ export default function BuscarCliente() {
                     )}
                 </section>
 
-                {/* Resultado */}
                 {cliente && (
                     <section className="mt-6 overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-slate-200">
 
@@ -143,7 +138,6 @@ export default function BuscarCliente() {
 
                         <div className="grid gap-5 p-6 sm:grid-cols-2">
 
-                            {/* ID */}
                             <div className="rounded-xl bg-slate-50 p-4">
                                 <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">
                                     ID
@@ -154,7 +148,6 @@ export default function BuscarCliente() {
                                 </p>
                             </div>
 
-                            {/* Nome */}
                             <div className="rounded-xl bg-slate-50 p-4">
                                 <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">
                                     Nome
@@ -165,7 +158,6 @@ export default function BuscarCliente() {
                                 </p>
                             </div>
 
-                            {/* Idade */}
                             <div className="rounded-xl bg-slate-50 p-4">
                                 <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">
                                     Idade
@@ -176,7 +168,6 @@ export default function BuscarCliente() {
                                 </p>
                             </div>
 
-                            {/* CPF */}
                             <div className="rounded-xl bg-slate-50 p-4">
                                 <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">
                                     CPF
@@ -187,7 +178,6 @@ export default function BuscarCliente() {
                                 </p>
                             </div>
 
-                            {/* Renda */}
                             <div className="rounded-xl bg-slate-50 p-4">
                                 <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">
                                     Renda mensal
@@ -203,7 +193,6 @@ export default function BuscarCliente() {
                                 </p>
                             </div>
 
-                            {/* Estado */}
                             <div className="rounded-xl bg-slate-50 p-4">
                                 <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">
                                     Estado
