@@ -1,5 +1,5 @@
 import type { Cliente, CriarEmprestimoRequest, Emprestimo} from "@/types";
-const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://analise-emprestimos-backend.onrender.com";
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "https://analise-emprestimos-backend.onrender.com";
 
 async function request<T>(
     endpoint: string,
