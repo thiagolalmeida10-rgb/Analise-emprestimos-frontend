@@ -22,7 +22,11 @@ export default function Clientes() {
         async function buscarClientes() {
             try {
                 const response = await fetch(
+<<<<<<< HEAD
                     "https://analise-emprestimos-backend.onrender.com/cliente"
+=======
+                    "http://localhost:3000/cliente"
+>>>>>>> f7bd5e293b626d088213ab83e137e1f0b152d898
                 );
 
                 if (!response.ok) {

@@ -29,7 +29,11 @@ export default function BuscarCliente() {
             setCliente(null);
 
             const response = await fetch(
+<<<<<<< HEAD
                 `https://analise-emprestimos-backend.onrender.com/cliente/${id}`
+=======
+                `http://localhost:3000/cliente/${id}`
+>>>>>>> f7bd5e293b626d088213ab83e137e1f0b152d898
             );
 
             if (!response.ok) {
