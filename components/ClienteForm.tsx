@@ -39,7 +39,7 @@ export default function ClientForm() {
 
         try {
             const response = await fetch(
-                "http://localhost:3000/cliente",
+                "http://analise-emprestimos-backend.onrender.com/cliente",
                 {
                     method: "POST",
                     headers: {
